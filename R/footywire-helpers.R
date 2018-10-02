@@ -12,19 +12,27 @@
 #' results <- get_match_results()
 #' convert_results(results)
 #' @export
+#' @importFrom rlang !!
+#' @importFrom rlang :=
 #' @importFrom magrittr %>%
 #' @import dplyr
-#' @import tidyr
-convert_results <- function(results) {
+convert_results <- function(results, arrange_by = Game, group_by = Game) {
 
+  gather_vars <- c("Home.Team", "Home.Goals", "Home.Behinds", "Home.Points",
+                   "Away.Team", "Away.Goals", "Away.Behinds", "Away.Points")
+  
+  arrange_by <- rlang::enquo(arrange_by)
+  group_by <- rlang::enquo(group_by)
+  marg_exp <- rlang::parse_expr("Margin * -1")
+  marg_comp <- rlang::parse_expr("ifelse(Status == \"Home\", Margin, Margin * -1)")
+  
   # Convert results to wide format
-  results_long <- results %>%
-    gather(variable, value, Home.Team:Away.Points) %>%
-    separate(variable, into = c("Status", "variable")) %>%
-    spread(variable, value) %>%
-    arrange(Game) %>%
-    mutate(Margin = ifelse(Status == "Home", Margin, Margin * -1))
-  return(results_long)
+  results %>%
+    tidyr::gather(!! "variable", !! "value", !! gather_vars) %>%
+    tidyr::separate(!! "variable", into = c("Status", "variable")) %>%
+    tidyr::spread(!! "variable", !! "value") %>%
+    dplyr::arrange(!! arrange_by) %>%
+    dplyr::mutate(!! quo_name("Margin") := !! marg_comp)
 }
 
 
