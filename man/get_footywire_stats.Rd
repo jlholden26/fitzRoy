@@ -2,7 +2,7 @@
 % Please edit documentation in R/footywire-calcs.R
 \name{get_footywire_stats}
 \alias{get_footywire_stats}
-\title{Scrape footywire player statitstics.}
+\title{Scrape footywire player statistics.}
 \usage{
 get_footywire_stats(ids)
 }

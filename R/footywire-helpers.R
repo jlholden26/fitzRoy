@@ -16,14 +16,12 @@
 #' @importFrom rlang :=
 #' @importFrom magrittr %>%
 #' @import dplyr
-convert_results <- function(results, arrange_by = Game, group_by = Game) {
+#' @import tidyr
+convert_results <- function(results) {
 
   gather_vars <- c("Home.Team", "Home.Goals", "Home.Behinds", "Home.Points",
                    "Away.Team", "Away.Goals", "Away.Behinds", "Away.Points")
   
-  arrange_by <- rlang::enquo(arrange_by)
-  group_by <- rlang::enquo(group_by)
-  marg_exp <- rlang::parse_expr("Margin * -1")
   marg_comp <- rlang::parse_expr("ifelse(Status == \"Home\", Margin, Margin * -1)")
   
   # Convert results to wide format
@@ -31,7 +29,7 @@ convert_results <- function(results, arrange_by = Game, group_by = Game) {
     tidyr::gather(!! "variable", !! "value", !! gather_vars) %>%
     tidyr::separate(!! "variable", into = c("Status", "variable")) %>%
     tidyr::spread(!! "variable", !! "value") %>%
-    dplyr::arrange(!! arrange_by) %>%
+    dplyr::arrange(!! sym("Game")) %>%
     dplyr::mutate(!! quo_name("Margin") := !! marg_comp)
 }
 
