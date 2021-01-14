@@ -45,7 +45,7 @@ get_afltables_stats <- function(start_date = "1897-01-01",
   message(paste0("Returning data from ", start_date, " to ", end_date))
 
   # nolint start
-  dat_url <- url("https://github.com/jimmyday12/fitzRoy_data/raw/master/data-raw/afl_tables_playerstats/afldata.rda")
+  dat_url <- url("https://github.com/jimmyday12/fitzRoy_data/raw/data-fix/data-raw/afl_tables_playerstats/afldata.rda")
   # nolint end
 
   load_r_data <- function(fname) {

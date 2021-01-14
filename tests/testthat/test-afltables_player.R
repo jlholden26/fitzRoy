@@ -95,3 +95,33 @@ test_that("finals drawn matches return the right home/away team", {
   expect_equal(nrow(bad_finals), 0)
   
 })
+
+test_that("some specific data examples are right", {
+  testthat::skip_if_offline()
+  testthat::skip_on_cran()
+  
+  dat <- afltables_data
+  
+  # Check a couple players
+  ind_AD <- dat$ID == 15000 &
+    dat$Playing.for == "Fitzroy" & 
+    dat$Season == 1898 & 
+    dat$Round %in% c(7,10)
+  
+  expect_equal(dat$First.name[ind_AD][1], "Arthur")
+  
+  ind_GS <- dat$ID == 4735 & 
+    dat$Season == 1900 & 
+    dat$Round == 10 & 
+    dat$Playing.for == "St Kilda"
+  
+  expect_equal(dat$First.name[ind_GS][1], "George")
+  
+  ind_GF <- dat$Season == 2010 & 
+    dat$Round == "GF" & 
+    dat$Attendance == 93853
+  
+  expect_equal(dat$Date[ind_GF][1], 
+               as.Date("2010-10-02", format = "%Y-%m-%d"))
+  
+})
