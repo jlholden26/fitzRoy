@@ -1,16 +1,17 @@
-pandoc: 2.7.3
-pkgdown: 1.6.1
+pandoc: 3.1.11
+pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
+  aflca-coaches-votes: aflca-coaches-votes.html
   docker-support: docker-support.html
   elo-ratings-example: elo-ratings-example.html
   fitzRoy: fitzRoy.html
   main-fetch-functions: main-fetch-functions.html
+  player-details: player-details.html
   using-fryzigg-stats: using-fryzigg-stats.html
   using-squiggle-api: using-squiggle-api.html
   womens-stats: womens-stats.html
-last_built: 2021-07-27T01:15Z
+last_built: 2024-07-23T09:43Z
 urls:
-  reference: https://jimmyday12.github.io/fitzRoy//reference
-  article: https://jimmyday12.github.io/fitzRoy//articles
-
+  reference: https://jimmyday12.github.io/fitzRoy/reference
+  article: https://jimmyday12.github.io/fitzRoy/articles

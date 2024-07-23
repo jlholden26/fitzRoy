@@ -6,13 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Using the Squiggle API • fitzRoy</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Using the Squiggle API">
-<meta property="og:description" content="fitzRoy">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -25,6 +24,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -37,18 +38,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fitzRoy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.0.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/fitzRoy.html">Get started</a>
 </li>
@@ -56,9 +51,9 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
-     
+
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -66,15 +61,23 @@
       <a href="../articles/main-fetch-functions.html">Main Fetch functions</a>
     </li>
     <li class="divider">
-    <li class="dropdown-header">Workflow Examples</li>
+    </li>
+<li class="dropdown-header">Workflow Examples</li>
     <li>
       <a href="../articles/womens-stats.html">AFL Womens Example</a>
     </li>
     <li>
+      <a href="../articles/player-details.html">Fetching Player Details</a>
+    </li>
+    <li>
       <a href="../articles/elo-ratings-example.html">ELO Ratings Example</a>
     </li>
+    <li>
+      <a href="../articles/aflca-coaches-votes.html">AFLCA Coaches Votes Functions</a>
+    </li>
     <li class="divider">
-    <li class="dropdown-header">APIs</li>
+    </li>
+<li class="dropdown-header">APIs</li>
     <li>
       <a href="../articles/using-squiggle-api.html">Using the Squiggle API</a>
     </li>
@@ -82,24 +85,38 @@
       <a href="../articles/using-fryzigg-stats.html">Using Fryzigg API</a>
     </li>
     <li class="divider">
-    <li>
-      <a href="../articles/index.html">More...</a>
+    </li>
+<li>
+      <a href="../articles/index.html">More articles...</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     News
-     
+
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
 <li class="dropdown-header">Releases</li>
     <li>
-      <a href="https://plussixoneblog.com/post/2021-03-15-fitzroy-v-1-0-0.en/">fitzRoy 1.0.0</a>
+      <a href="https://www.plussixoneblog.com/posts/2024-06-07-fiztRoy-v-1-4-0/" class="external-link">fitzRoy 1.4.0</a>
+    </li>
+    <li>
+      <a href="https://www.plussixoneblog.com/posts/2023-03-02-fitzRoy-v-1-3-0/" class="external-link">fitzRoy 1.3.0</a>
+    </li>
+    <li>
+      <a href="https://www.plussixoneblog.com/posts/2022-09-29-fitzRoy-v-1-2-0.en.html" class="external-link">fitzRoy 1.2.0</a>
+    </li>
+    <li>
+      <a href="https://www.plussixoneblog.com/posts/2022-01-11-fitzRoy-v-1-1-0.en.html" class="external-link">fitzRoy 1.1.0</a>
+    </li>
+    <li>
+      <a href="https://www.plussixoneblog.com/posts/2021-03-15-fitzRoy-v-1-0-0.en.html" class="external-link">fitzRoy 1.0.0</a>
     </li>
     <li class="divider">
-    <li>
+    </li>
+<li>
       <a href="../news/index.html">Changelog</a>
     </li>
   </ul>
@@ -107,9 +124,9 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/jimmyday12/fitzRoy/">
+  <a href="https://github.com/jimmyday12/fitzRoy/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -120,15 +137,15 @@
 </div>
 <!--/.navbar -->
 
-      
 
-      </header><script src="using-squiggle-api_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Using the Squiggle API</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/jimmyday12/fitzRoy/blob/master/vignettes/using-squiggle-api.Rmd"><code>vignettes/using-squiggle-api.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/jimmyday12/fitzRoy/blob/main/vignettes/using-squiggle-api.Rmd" class="external-link"><code>vignettes/using-squiggle-api.Rmd</code></a></small>
       <div class="hidden name"><code>using-squiggle-api.Rmd</code></div>
 
     </div>
@@ -136,286 +153,312 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jimmyday12.github.io/fitzRoy/">fitzRoy</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></code></pre></div>
-<div id="squiggle-data" class="section level1">
-<h1 class="hasAnchor">
-<a href="#squiggle-data" class="anchor"></a>Squiggle Data</h1>
-<p>You can access data from the <a href="https://api.squiggle.com.au">Squiggle API</a> directly with the <code>fetch_squiggle_data</code>. This allows direct access to the Squiggle API.</p>
-<p>Note that we also provide some helper functions that map more closely to our <code>fetch_</code> functions such as <code>fetch_ladder_squiggle</code>.</p>
-<div id="queries" class="section level2">
-<h2 class="hasAnchor">
-<a href="#queries" class="anchor"></a>Queries</h2>
-<p>Full instructions for constructing queries can be found at <a href="https://api.squiggle.com.au">Squiggle API</a>. One of the following must be provided to the <code>query</code> argument.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jimmyday12.github.io/fitzRoy/">fitzRoy</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span></code></pre></div>
+<div class="section level2">
+<h2 id="squiggle-data">Squiggle Data<a class="anchor" aria-label="anchor" href="#squiggle-data"></a>
+</h2>
+<p>You can access data from the <a href="https://api.squiggle.com.au" class="external-link">Squiggle API</a> directly with the
+<code>fetch_squiggle_data</code>. This allows direct access to the
+Squiggle API.</p>
+<p>Note that we also provide some helper functions that map more closely
+to our <code>fetch_</code> functions such as
+<code>fetch_ladder_squiggle</code>.</p>
+<div class="section level3">
+<h3 id="queries">Queries<a class="anchor" aria-label="anchor" href="#queries"></a>
+</h3>
+<p>Full instructions for constructing queries can be found at <a href="https://api.squiggle.com.au" class="external-link">Squiggle API</a>. One of the
+following must be provided to the <code>query</code> argument.</p>
 <ul>
 <li>
-<code>teams</code> - Info about teams (e.g. Richmond, Geelong, West Coast)</li>
+<code>teams</code> - Info about teams (e.g. Richmond, Geelong, West
+Coast)</li>
 <li>
-<code>games</code> - Info about games (e.g. Round 1, 2019 Richmond v Carlton)</li>
+<code>games</code> - Info about games (e.g. Round 1, 2019 Richmond v
+Carlton)</li>
 <li>
-<code>sources</code> - Info about models (e.g. Matter of Stats, GRAFT, Swinburne)</li>
+<code>sources</code> - Info about models (e.g. Matter of Stats,
+GRAFT, Swinburne)</li>
 <li>
-<code>tips</code> - Info about tips and predictions made by models</li>
+<code>tips</code> - Info about tips and predictions made by
+models</li>
 <li>
-<code>standings</code> - Info about team standings (i.e. the ladder)</li>
+<code>standings</code> - Info about team standings (i.e. the
+ladder)</li>
 <li>
-<code>ladder</code> - Info about predicted ladders generated by models</li>
+<code>ladder</code> - Info about predicted ladders generated by
+models</li>
 <li>
 <code>virtual</code> - Info about Virtually Season 2020</li>
 <li>
-<code>pav</code> - Info about Player Approximate Value from HPN Footy</li>
+<code>pav</code> - Info about Player Approximate Value from HPN
+Footy</li>
 </ul>
 </div>
-<div id="optional-arguments" class="section level2">
-<h2 class="hasAnchor">
-<a href="#optional-arguments" class="anchor"></a>Optional Arguments</h2>
+<div class="section level3">
+<h3 id="optional-arguments">Optional Arguments<a class="anchor" aria-label="anchor" href="#optional-arguments"></a>
+</h3>
 <p>Optional arguments can then be supplied based on the query.</p>
-<p>For example, <code>games</code> takes the following optional arguments. * <code>year</code> - Year * <code>round</code> - Round * <code>game</code> - Game ID * <code>complete</code> - Percent of game complete</p>
-<p>These can be supplied as named arguments after the query. For example, to return games from just 2020, we would use the following.</p>
+<p>For example, <code>games</code> takes the following optional
+arguments. * <code>year</code> - Year * <code>round</code> - Round *
+<code>game</code> - Game ID * <code>complete</code> - Percent of game
+complete</p>
+<p>These can be supplied as named arguments after the query. For
+example, to return games from just 2020, we would use the following.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span>query <span class="op">=</span> <span class="st">"games"</span>, year <span class="op">=</span> <span class="fl">2020</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 162 × 24
-#&gt;    date   updated hscore ateam is_grand_final  year localtime hteam ascore    id
-#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;          &lt;int&gt; &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;int&gt; &lt;int&gt;
-#&gt;  1 2020-… 2020-0…     71 Sydn…              0  2020 2020-03-… Adel…     74  4401
-#&gt;  2 2020-… 2020-0…     63 Frem…              0  2020 2020-03-… Esse…     57  4400
-#&gt;  3 2020-… 2020-0…     29 Port…              0  2020 2020-03-… Gold…     76  4403
-#&gt;  4 2020-… 2020-0…    105 Geel…              0  2020 2020-03-… Grea…     73  4402
-#&gt;  5 2020-… 2020-0…     90 Bris…              0  2020 2020-03-… Hawt…     62  4412
-#&gt;  6 2020-… 2020-0…     56 St K…              0  2020 2020-03-… Nort…     54  4404
-#&gt;  7 2020-… 2020-0…    105 Carl…              0  2020 2020-03-… Rich…     81  4396
-#&gt;  8 2020-… 2020-0…     78 Melb…              0  2020 2020-03-… West…     51  4413
-#&gt;  9 2020-… 2020-0…     34 Coll…              0  2020 2020-03-… West…     86  4397
-#&gt; 10 2020-… 2020-0…     81 Frem…              0  2020 2020-06-… Bris…     69  4746
-#&gt; # … with 152 more rows, and 14 more variables: agoals &lt;int&gt;, venue &lt;chr&gt;,
-#&gt; #   hteamid &lt;int&gt;, hbehinds &lt;int&gt;, complete &lt;int&gt;, abehinds &lt;int&gt;,
-#&gt; #   winnerteamid &lt;int&gt;, ateamid &lt;int&gt;, is_final &lt;int&gt;, winner &lt;chr&gt;,
-#&gt; #   round &lt;int&gt;, tz &lt;chr&gt;, hgoals &lt;int&gt;, roundname &lt;chr&gt;</code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span>query <span class="op">=</span> <span class="st">"games"</span>, year <span class="op">=</span> <span class="fl">2020</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 162 × 24</span></span></span>
+<span><span class="co">#&gt;    ascore hteamid hgoals localtime    is_grand_final date  hscore ateamid agoals</span></span>
+<span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>     74       1     11 2020-03-21 …              0 2020…     71      16     11</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>     57       5      9 2020-03-21 …              0 2020…     63       6      8</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>     76       8      4 2020-03-21 …              0 2020…     29      13     10</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>     73       9     17 2020-03-21 …              0 2020…    105       7     11</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>     62      10     14 2020-03-22 …              0 2020…     90       2      9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>     54      12      8 2020-03-22 …              0 2020…     56      15      7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>     81      14     16 2020-03-19 …              0 2020…    105       3     12</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>     51      17     12 2020-03-22 …              0 2020…     78      11      7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>     86      18      5 2020-03-20 …              0 2020…     34       4     13</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     69       2     12 2020-06-13 …              0 2020…     81       6     10</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 152 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 15 more variables: hbehinds &lt;int&gt;, venue &lt;chr&gt;, hteam &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   is_final &lt;int&gt;, id &lt;int&gt;, roundname &lt;chr&gt;, round &lt;int&gt;, winner &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   abehinds &lt;int&gt;, ateam &lt;chr&gt;, tz &lt;chr&gt;, updated &lt;chr&gt;, complete &lt;int&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   winnerteamid &lt;int&gt;, year &lt;int&gt;</span></span></span></code></pre>
 </div>
 </div>
-<div id="examples" class="section level1">
-<h1 class="hasAnchor">
-<a href="#examples" class="anchor"></a>Examples</h1>
-<div id="teams" class="section level2">
-<h2 class="hasAnchor">
-<a href="#teams" class="anchor"></a>Teams</h2>
+<div class="section level2">
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h2>
+<div class="section level3">
+<h3 id="teams">Teams<a class="anchor" aria-label="anchor" href="#teams"></a>
+</h3>
 <p>Fetch info about one or more AFL teams.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"teams"</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 18 × 4
-#&gt;    logo                                           name                 id abbrev
-#&gt;    &lt;chr&gt;                                          &lt;chr&gt;             &lt;int&gt; &lt;chr&gt; 
-#&gt;  1 /wp-content/themes/squiggle/assets/images/Ade… Adelaide              1 ADE   
-#&gt;  2 /wp-content/themes/squiggle/assets/images/Bri… Brisbane Lions        2 BRI   
-#&gt;  3 /wp-content/themes/squiggle/assets/images/Car… Carlton               3 CAR   
-#&gt;  4 /wp-content/themes/squiggle/assets/images/Col… Collingwood           4 COL   
-#&gt;  5 /wp-content/themes/squiggle/assets/images/Ess… Essendon              5 ESS   
-#&gt;  6 /wp-content/themes/squiggle/assets/images/Fre… Fremantle             6 FRE   
-#&gt;  7 /wp-content/themes/squiggle/assets/images/Gee… Geelong               7 GEE   
-#&gt;  8 /wp-content/themes/squiggle/assets/images/Gol… Gold Coast            8 GC    
-#&gt;  9 /wp-content/themes/squiggle/assets/images/Gia… Greater Western …     9 GWS   
-#&gt; 10 /wp-content/themes/squiggle/assets/images/Haw… Hawthorn             10 HAW   
-#&gt; 11 /wp-content/themes/squiggle/assets/images/Mel… Melbourne            11 MEL   
-#&gt; 12 /wp-content/themes/squiggle/assets/images/Nor… North Melbourne      12 NOR   
-#&gt; 13 /wp-content/themes/squiggle/assets/images/Por… Port Adelaide        13 POR   
-#&gt; 14 /wp-content/themes/squiggle/assets/images/Ric… Richmond             14 RIC   
-#&gt; 15 /wp-content/themes/squiggle/assets/images/StK… St Kilda             15 STK   
-#&gt; 16 /wp-content/themes/squiggle/assets/images/Syd… Sydney               16 SYD   
-#&gt; 17 /wp-content/themes/squiggle/assets/images/Wes… West Coast           17 WCE   
-#&gt; 18 /wp-content/themes/squiggle/assets/images/Bul… Western Bulldogs     18 WBD</code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"teams"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 18 × 4</span></span></span>
+<span><span class="co">#&gt;    logo                                                       abbrev    id name </span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                                      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> /wp-content/themes/squiggle/assets/images/Adelaide.png     ADE        1 Adel…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> /wp-content/themes/squiggle/assets/images/Brisbane.png     BRI        2 Bris…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> /wp-content/themes/squiggle/assets/images/Carlton.png      CAR        3 Carl…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> /wp-content/themes/squiggle/assets/images/Collingwood.png  COL        4 Coll…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> /wp-content/themes/squiggle/assets/images/Essendon.png     ESS        5 Esse…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> /wp-content/themes/squiggle/assets/images/Fremantle.png    FRE        6 Frem…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> /wp-content/themes/squiggle/assets/images/Geelong.png      GEE        7 Geel…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> /wp-content/themes/squiggle/assets/images/GoldCoast.png    GC         8 Gold…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> /wp-content/themes/squiggle/assets/images/Giants.png       GWS        9 Grea…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> /wp-content/themes/squiggle/assets/images/Hawthorn.png     HAW       10 Hawt…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> /wp-content/themes/squiggle/assets/images/Melbourne.png    MEL       11 Melb…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> /wp-content/themes/squiggle/assets/images/NorthMelbourne.… NOR       12 Nort…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> /wp-content/themes/squiggle/assets/images/PortAdelaide.png POR       13 Port…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> /wp-content/themes/squiggle/assets/images/Richmond.png     RIC       14 Rich…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> /wp-content/themes/squiggle/assets/images/StKilda.png      STK       15 St K…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> /wp-content/themes/squiggle/assets/images/Sydney.png       SYD       16 Sydn…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> /wp-content/themes/squiggle/assets/images/WestCoast.png    WCE       17 West…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> /wp-content/themes/squiggle/assets/images/Bulldogs.png     WBD       18 West…</span></span></code></pre>
 </div>
-<div id="games" class="section level2">
-<h2 class="hasAnchor">
-<a href="#games" class="anchor"></a>Games</h2>
+<div class="section level3">
+<h3 id="games">Games<a class="anchor" aria-label="anchor" href="#games"></a>
+</h3>
 <p>Fetch info about one or more games.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span>query <span class="op">=</span> <span class="st">"games"</span>, year <span class="op">=</span> <span class="fl">2020</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 162 × 24
-#&gt;    date   updated hscore ateam is_grand_final  year localtime hteam ascore    id
-#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;          &lt;int&gt; &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;int&gt; &lt;int&gt;
-#&gt;  1 2020-… 2020-0…     71 Sydn…              0  2020 2020-03-… Adel…     74  4401
-#&gt;  2 2020-… 2020-0…     63 Frem…              0  2020 2020-03-… Esse…     57  4400
-#&gt;  3 2020-… 2020-0…     29 Port…              0  2020 2020-03-… Gold…     76  4403
-#&gt;  4 2020-… 2020-0…    105 Geel…              0  2020 2020-03-… Grea…     73  4402
-#&gt;  5 2020-… 2020-0…     90 Bris…              0  2020 2020-03-… Hawt…     62  4412
-#&gt;  6 2020-… 2020-0…     56 St K…              0  2020 2020-03-… Nort…     54  4404
-#&gt;  7 2020-… 2020-0…    105 Carl…              0  2020 2020-03-… Rich…     81  4396
-#&gt;  8 2020-… 2020-0…     78 Melb…              0  2020 2020-03-… West…     51  4413
-#&gt;  9 2020-… 2020-0…     34 Coll…              0  2020 2020-03-… West…     86  4397
-#&gt; 10 2020-… 2020-0…     81 Frem…              0  2020 2020-06-… Bris…     69  4746
-#&gt; # … with 152 more rows, and 14 more variables: agoals &lt;int&gt;, venue &lt;chr&gt;,
-#&gt; #   hteamid &lt;int&gt;, hbehinds &lt;int&gt;, complete &lt;int&gt;, abehinds &lt;int&gt;,
-#&gt; #   winnerteamid &lt;int&gt;, ateamid &lt;int&gt;, is_final &lt;int&gt;, winner &lt;chr&gt;,
-#&gt; #   round &lt;int&gt;, tz &lt;chr&gt;, hgoals &lt;int&gt;, roundname &lt;chr&gt;</code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span>query <span class="op">=</span> <span class="st">"games"</span>, year <span class="op">=</span> <span class="fl">2020</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 162 × 24</span></span></span>
+<span><span class="co">#&gt;    ascore hteamid hgoals localtime    is_grand_final date  hscore ateamid agoals</span></span>
+<span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>     74       1     11 2020-03-21 …              0 2020…     71      16     11</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>     57       5      9 2020-03-21 …              0 2020…     63       6      8</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>     76       8      4 2020-03-21 …              0 2020…     29      13     10</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>     73       9     17 2020-03-21 …              0 2020…    105       7     11</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>     62      10     14 2020-03-22 …              0 2020…     90       2      9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>     54      12      8 2020-03-22 …              0 2020…     56      15      7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>     81      14     16 2020-03-19 …              0 2020…    105       3     12</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>     51      17     12 2020-03-22 …              0 2020…     78      11      7</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>     86      18      5 2020-03-20 …              0 2020…     34       4     13</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     69       2     12 2020-06-13 …              0 2020…     81       6     10</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 152 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 15 more variables: hbehinds &lt;int&gt;, venue &lt;chr&gt;, hteam &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   is_final &lt;int&gt;, id &lt;int&gt;, roundname &lt;chr&gt;, round &lt;int&gt;, winner &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   abehinds &lt;int&gt;, ateam &lt;chr&gt;, tz &lt;chr&gt;, updated &lt;chr&gt;, complete &lt;int&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   winnerteamid &lt;int&gt;, year &lt;int&gt;</span></span></span></code></pre>
 </div>
-<div id="sources" class="section level2">
-<h2 class="hasAnchor">
-<a href="#sources" class="anchor"></a>Sources</h2>
+<div class="section level3">
+<h3 id="sources">Sources<a class="anchor" aria-label="anchor" href="#sources"></a>
+</h3>
 <p>Fetch info about one or more computer models.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># You can get the sources</span>
-<span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"sources"</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 22 × 4
-#&gt;    name           icon                               url                      id
-#&gt;    &lt;chr&gt;          &lt;chr&gt;                              &lt;chr&gt;                 &lt;int&gt;
-#&gt;  1 Squiggle       "/wp-content/uploads/2017/02/logo… "https://live.squigg…     1
-#&gt;  2 The Arc        "/wp-content/themes/squiggle/asse… "https://thearcfooty…     2
-#&gt;  3 Figuring Footy "/wp-content/themes/squiggle/asse… "http://figuringfoot…     3
-#&gt;  4 Matter of Sta… "/wp-content/themes/squiggle/asse… "http://www.matterof…     4
-#&gt;  5 Punters        ""                                 ""                        5
-#&gt;  6 Footy Maths I… "/wp-content/themes/squiggle/asse… "https://footymaths.…     6
-#&gt;  7 PlusSixOne     "/wp-content/themes/squiggle/asse… "http://plussixonebl…     7
-#&gt;  8 Aggregate      ""                                 "/introducing-s10/"       8
-#&gt;  9 Graft          "/wp-content/themes/squiggle/asse… "http://graftratings…     9
-#&gt; 10 Stattraction   "/wp-content/themes/squiggle/asse… "https://stattractio…    10
-#&gt; # … with 12 more rows</code></pre>
+<code class="sourceCode R"><span><span class="co"># You can get the sources</span></span>
+<span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"sources"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 25 × 4</span></span></span>
+<span><span class="co">#&gt;    url                                   icon                           id name </span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> <span style="color: #949494;">"</span>https://live.squiggle.com.au/<span style="color: #949494;">"</span>       <span style="color: #949494;">"</span>/wp-content/uploads/2017/…     1 Squi…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> <span style="color: #949494;">"</span>https://thearcfooty.com/<span style="color: #949494;">"</span>            <span style="color: #949494;">"</span>/wp-content/themes/squigg…     2 The …</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> <span style="color: #949494;">"</span>http://figuringfooty.com/<span style="color: #949494;">"</span>           <span style="color: #949494;">"</span>/wp-content/themes/squigg…     3 Figu…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> <span style="color: #949494;">"</span>http://www.matterofstats.com/<span style="color: #949494;">"</span>       <span style="color: #949494;">"</span>/wp-content/themes/squigg…     4 Matt…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> <span style="color: #949494;">""</span>                                    <span style="color: #949494;">""</span>                              5 Punt…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> <span style="color: #949494;">"</span>https://footymaths.blogspot.com<span style="color: #949494;">"</span>     <span style="color: #949494;">"</span>/wp-content/themes/squigg…     6 FMI  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> <span style="color: #949494;">"</span>http://plussixoneblog.com/<span style="color: #949494;">"</span>          <span style="color: #949494;">"</span>/wp-content/themes/squigg…     7 Plus…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> <span style="color: #949494;">"</span>/introducing-s10/<span style="color: #949494;">"</span>                   <span style="color: #949494;">""</span>                              8 Aggr…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> <span style="color: #949494;">"</span>http://graftratings.com/afl/<span style="color: #949494;">"</span>        <span style="color: #949494;">"</span>/wp-content/themes/squigg…     9 Graft</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> <span style="color: #949494;">"</span>https://stattraction.wordpress.com/<span style="color: #949494;">"</span> <span style="color: #949494;">"</span>/wp-content/themes/squigg…    10 Stat…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 15 more rows</span></span></span></code></pre>
 </div>
-<div id="tips" class="section level2">
-<h2 class="hasAnchor">
-<a href="#tips" class="anchor"></a>Tips</h2>
+<div class="section level3">
+<h3 id="tips">Tips<a class="anchor" aria-label="anchor" href="#tips"></a>
+</h3>
 <p>Fetch info about one or more tips made by computer models.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Get all tips</span>
-<span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"tips"</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 12,917 × 21
-#&gt;      err correct ateamid  year hconfidence gameid tipteamid    bits confidence
-#&gt;    &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt; &lt;int&gt;       &lt;dbl&gt;  &lt;int&gt;     &lt;int&gt;   &lt;dbl&gt;      &lt;dbl&gt;
-#&gt;  1 42          1      14  2017        50        1        14  0            50  
-#&gt;  2 NA          1      14  2017        42        1        14  0.214        58  
-#&gt;  3 48.4        0      14  2017        56.7      1         3 -0.208        56.7
-#&gt;  4  3.69       1      18  2017        37.3      2        18  0.326        62.7
-#&gt;  5  3          1      18  2017        38        2        18  0.310        62  
-#&gt;  6 53          1       9  2017        50        8         1  0            50  
-#&gt;  7 35          1      14  2017        41.2      1        14  0.234        58.8
-#&gt;  8  1          1      18  2017        35.9      2        18  0.358        64.1
-#&gt;  9 32          0      11  2017        52.9      4        15 -0.0862       52.9
-#&gt; 10 57          0      13  2017        79.4      3        16 -1.28         79.4
-#&gt; # … with 12,907 more rows, and 12 more variables: hteam &lt;chr&gt;, round &lt;int&gt;,
-#&gt; #   ateam &lt;chr&gt;, updated &lt;chr&gt;, venue &lt;chr&gt;, source &lt;chr&gt;, margin &lt;dbl&gt;,
-#&gt; #   date &lt;chr&gt;, hmargin &lt;dbl&gt;, hteamid &lt;int&gt;, sourceid &lt;int&gt;, tip &lt;chr&gt;</code></pre>
+<code class="sourceCode R"><span><span class="co"># Get all tips</span></span>
+<span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"tips"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 15,682 × 21</span></span></span>
+<span><span class="co">#&gt;    hmargin  year gameid ateamid source correct   err    bits ateam updated date </span></span>
+<span><span class="co">#&gt;      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>   -<span style="color: #BB0000;">1</span>     <span style="text-decoration: underline;">2</span>017      1      14 Squig…       1 42     0      Rich… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>   <span style="color: #BB0000;">NA</span>     <span style="text-decoration: underline;">2</span>017      1      14 Figur…       1 <span style="color: #BB0000;">NA</span>     0.214  Rich… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>    5.39  <span style="text-decoration: underline;">2</span>017      1      14 Matte…       0 48.4  -<span style="color: #BB0000;">0.208</span>  Rich… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>  -<span style="color: #BB0000;">10.3</span>   <span style="text-decoration: underline;">2</span>017      2      18 Matte…       1  3.69  0.326  West… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>  -<span style="color: #BB0000;">17</span>     <span style="text-decoration: underline;">2</span>017      2      18 Squig…       1  3     0.310  West… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>    3     <span style="text-decoration: underline;">2</span>017      8       9 Squig…       1 53     0      Grea… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>   -<span style="color: #BB0000;">8</span>     <span style="text-decoration: underline;">2</span>017      1      14 The A…       1 35     0.234  Rich… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>  -<span style="color: #BB0000;">13</span>     <span style="text-decoration: underline;">2</span>017      2      18 The A…       1  1     0.358  West… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>    2     <span style="text-decoration: underline;">2</span>017      4      11 The A…       0 32    -<span style="color: #BB0000;">0.086</span><span style="color: #BB0000; text-decoration: underline;">2</span> Melb… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>   29     <span style="text-decoration: underline;">2</span>017      3      13 The A…       0 57    -<span style="color: #BB0000;">1.28</span>   Port… 2017-0… 2017…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 15,672 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 10 more variables: hteamid &lt;int&gt;, round &lt;int&gt;, hconfidence &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   margin &lt;dbl&gt;, tipteamid &lt;int&gt;, sourceid &lt;int&gt;, venue &lt;chr&gt;, hteam &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   confidence &lt;dbl&gt;, tip &lt;chr&gt;</span></span></span></code></pre>
 <p>We can just look at one particular round.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># Get` just tips from round 1, 2018</span>
-<span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"tips"</span>, round <span class="op">=</span> <span class="fl">1</span>, year <span class="op">=</span> <span class="fl">2018</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 126 × 21
-#&gt;      err correct ateamid  year hconfidence gameid tipteamid    bits confidence
-#&gt;    &lt;dbl&gt;   &lt;int&gt;   &lt;int&gt; &lt;int&gt;       &lt;dbl&gt;  &lt;int&gt;     &lt;int&gt;   &lt;dbl&gt;      &lt;dbl&gt;
-#&gt;  1  NA         1       3  2018        79.8    372        14  0.675        79.8
-#&gt;  2  NA         1       1  2018        52.1    373         5  0.0588       52.1
-#&gt;  3  NA         1       2  2018        71.7    374        15  0.521        71.7
-#&gt;  4  NA         1       6  2018        79.4    375        13  0.666        79.4
-#&gt;  5  NA         0      12  2018        49.5    376        12 -0.0151       50.5
-#&gt;  6  NA         1       4  2018        54.4    377        10  0.122        54.4
-#&gt;  7  NA         1      18  2018        72.2    378         9  0.530        72.2
-#&gt;  8  NA         0       7  2018        56.4    379        11 -0.198        56.4
-#&gt;  9  NA         1      16  2018        30.0    380        16  0.486        70.0
-#&gt; 10   9.2       1       3  2018        79.8    372        14  0.674        79.8
-#&gt; # … with 116 more rows, and 12 more variables: hteam &lt;chr&gt;, round &lt;int&gt;,
-#&gt; #   ateam &lt;chr&gt;, updated &lt;chr&gt;, venue &lt;chr&gt;, source &lt;chr&gt;, margin &lt;dbl&gt;,
-#&gt; #   date &lt;chr&gt;, hmargin &lt;dbl&gt;, hteamid &lt;int&gt;, sourceid &lt;int&gt;, tip &lt;chr&gt;</code></pre>
+<code class="sourceCode R"><span><span class="co"># Get` just tips from round 1, 2018</span></span>
+<span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"tips"</span>, round <span class="op">=</span> <span class="fl">1</span>, year <span class="op">=</span> <span class="fl">2018</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 126 × 21</span></span></span>
+<span><span class="co">#&gt;    hmargin  year gameid ateamid source correct   err    bits ateam updated date </span></span>
+<span><span class="co">#&gt;      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    372       3 Punte…       1  <span style="color: #BB0000;">NA</span>    0.675  Carl… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    373       1 Punte…       1  <span style="color: #BB0000;">NA</span>    0.058<span style="text-decoration: underline;">8</span> Adel… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    374       2 Punte…       1  <span style="color: #BB0000;">NA</span>    0.521  Bris… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    375       6 Punte…       1  <span style="color: #BB0000;">NA</span>    0.666  Frem… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    376      12 Punte…       0  <span style="color: #BB0000;">NA</span>   -<span style="color: #BB0000;">0.015</span><span style="color: #BB0000; text-decoration: underline;">1</span> Nort… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    377       4 Punte…       1  <span style="color: #BB0000;">NA</span>    0.122  Coll… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    378      18 Punte…       1  <span style="color: #BB0000;">NA</span>    0.530  West… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    379       7 Punte…       0  <span style="color: #BB0000;">NA</span>   -<span style="color: #BB0000;">0.198</span>  Geel… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>    <span style="color: #BB0000;">NA</span>    <span style="text-decoration: underline;">2</span>018    380      16 Punte…       1  <span style="color: #BB0000;">NA</span>    0.486  Sydn… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>    35.2  <span style="text-decoration: underline;">2</span>018    372       3 Aggre…       1   9.2  0.674  Carl… 2018-0… 2018…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 116 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 10 more variables: hteamid &lt;int&gt;, round &lt;int&gt;, hconfidence &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   margin &lt;dbl&gt;, tipteamid &lt;int&gt;, sourceid &lt;int&gt;, venue &lt;chr&gt;, hteam &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   confidence &lt;dbl&gt;, tip &lt;chr&gt;</span></span></span></code></pre>
 </div>
-<div id="standings" class="section level2">
-<h2 class="hasAnchor">
-<a href="#standings" class="anchor"></a>Standings</h2>
-<p>Fetch info about team standings at a point in time, i.e. the ladder.</p>
+<div class="section level3">
+<h3 id="standings">Standings<a class="anchor" aria-label="anchor" href="#standings"></a>
+</h3>
+<p>Fetch info about team standings at a point in time, i.e. the
+ladder.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"standings"</span>, year <span class="op">=</span> <span class="fl">2020</span>, round <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 18 × 15
-#&gt;     wins    id  rank goals_against goals_for  for. draws   pts percentage name  
-#&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;         &lt;int&gt;     &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;      &lt;dbl&gt; &lt;chr&gt; 
-#&gt;  1     1    13     1             4        10    76     0     4      262.  Port …
-#&gt;  2     1     4     2             5        13    86     0     4      253.  Colli…
-#&gt;  3     1    17     3             7        12    78     0     4      153.  West …
-#&gt;  4     1    10     4             9        14    90     0     4      145.  Hawth…
-#&gt;  5     1     9     5            11        17   105     0     4      144.  Great…
-#&gt;  6     1    14     6            12        16   105     0     4      130.  Richm…
-#&gt;  7     1     5     7             8         9    63     0     4      111.  Essen…
-#&gt;  8     1    16     8            11        11    74     0     4      104.  Sydney
-#&gt;  9     1    12     9             7         8    56     0     4      104.  North…
-#&gt; 10     0    15    10             8         7    54     0     0       96.4 St Ki…
-#&gt; 11     0     1    11            11        11    71     0     0       95.9 Adela…
-#&gt; 12     0     6    12             9         8    57     0     0       90.5 Frema…
-#&gt; 13     0     3    13            16        12    81     0     0       77.1 Carlt…
-#&gt; 14     0     7    14            17        11    73     0     0       69.5 Geelo…
-#&gt; 15     0     2    15            14         9    62     0     0       68.9 Brisb…
-#&gt; 16     0    11    16            12         7    51     0     0       65.4 Melbo…
-#&gt; 17     0    18    17            13         5    34     0     0       39.5 Weste…
-#&gt; 18     0     8    18            10         4    29     0     0       38.2 Gold …
-#&gt; # … with 5 more variables: against &lt;int&gt;, behinds_for &lt;int&gt;,
-#&gt; #   behinds_against &lt;int&gt;, losses &lt;int&gt;, played &lt;int&gt;</code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"standings"</span>, year <span class="op">=</span> <span class="fl">2020</span>, round <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 18 × 15</span></span></span>
+<span><span class="co">#&gt;    percentage played goals_against name   behinds_for  wins losses against draws</span></span>
+<span><span class="co">#&gt;         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      262.       1             4 Port …          16     1      0      29     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      253.       1             5 Colli…           8     1      0      34     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      153.       1             7 West …           6     1      0      51     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      145.       1             9 Hawth…           6     1      0      62     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      144.       1            11 Great…           3     1      0      73     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      130.       1            12 Richm…           9     1      0      81     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      111.       1             8 Essen…           9     1      0      57     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      104.       1            11 Sydney           8     1      0      71     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      104.       1             7 North…           8     1      0      54     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>       96.4      1             8 St Ki…          12     0      1      56     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>       95.9      1            11 Adela…           5     0      1      74     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>       90.5      1             9 Frema…           9     0      1      63     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span>       77.1      1            16 Carlt…           9     0      1     105     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span>       69.5      1            17 Geelo…           7     0      1     105     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span>       68.9      1            14 Brisb…           8     0      1      90     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span>       65.4      1            12 Melbo…           9     0      1      78     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span>       39.5      1            13 Weste…           4     0      1      86     0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span>       38.2      1            10 Gold …           5     0      1      76     0</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 6 more variables: for. &lt;int&gt;, id &lt;int&gt;, rank &lt;int&gt;, pts &lt;int&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   goals_for &lt;int&gt;, behinds_against &lt;int&gt;</span></span></span></code></pre>
 </div>
-<div id="ladder" class="section level2">
-<h2 class="hasAnchor">
-<a href="#ladder" class="anchor"></a>Ladder</h2>
-<p>Fetch info about one or more projected ladders generated by computer models. For the actual ladder, see standings instead.</p>
+<div class="section level3">
+<h3 id="ladder">Ladder<a class="anchor" aria-label="anchor" href="#ladder"></a>
+</h3>
+<p>Fetch info about one or more projected ladders generated by computer
+models. For the actual ladder, see standings instead.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"ladder"</span>, year <span class="op">=</span> <span class="fl">2019</span>, round <span class="op">=</span> <span class="fl">15</span>, source <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 18 × 12
-#&gt;    swarms    wins percentage team  sourceid  rank round mean_rank updated teamid
-#&gt;    &lt;chr&gt;    &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt;
-#&gt;  1 "c(\"0.…  12.7      111.  Adel…        1     6    15      6.11 2019-0…      1
-#&gt;  2 "c(\"0.…  13        107.  Bris…        1     5    15      6.01 2019-0…      2
-#&gt;  3 "c(\"0.…   6.1       82.8 Carl…        1    17    15     16.7  2019-0…      3
-#&gt;  4 "c(\"3.…  14.1      114   Coll…        1     4    15      4.20 2019-0…      4
-#&gt;  5 "c(\"0.…  10.8       99.8 Esse…        1    10    15      9.98 2019-0…      5
-#&gt;  6 "c(\"0.…  10.8      104.  Frem…        1     9    15      9.71 2019-0…      6
-#&gt;  7 "c(\"84…  17.3      138.  Geel…        1     1    15      1.21 2019-0…      7
-#&gt;  8 "c(\"0.…   4.9       70.2 Gold…        1    18    15     17.7  2019-0…      8
-#&gt;  9 "c(\"7.…  14.4      129.  Grea…        1     2    15      3.26 2019-0…      9
-#&gt; 10 "c(\"0.…   8.8       97.6 Hawt…        1    14    15     13.0  2019-0…     10
-#&gt; 11 "c(\"0.…   8         85.3 Melb…        1    16    15     14.8  2019-0…     11
-#&gt; 12 "c(\"0.…  10.2       98.9 Nort…        1    11    15     10.9  2019-0…     12
-#&gt; 13 "c(\"0.…  11.5      107.  Port…        1     8    15      8.24 2019-0…     13
-#&gt; 14 "c(\"0.…  12.8      101.  Rich…        1     7    15      6.67 2019-0…     14
-#&gt; 15 "c(\"0.…   9         83.2 St K…        1    15    15     13.8  2019-0…     15
-#&gt; 16 "c(\"0.…   9.2       93.4 Sydn…        1    13    15     12.9  2019-0…     16
-#&gt; 17 "c(\"4.…  14.4      107.  West…        1     3    15      4.16 2019-0…     17
-#&gt; 18 "c(\"0.…   9.8       94.1 West…        1    12    15     11.9  2019-0…     18
-#&gt; # … with 2 more variables: source &lt;chr&gt;, year &lt;int&gt;</code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"ladder"</span>, year <span class="op">=</span> <span class="fl">2019</span>, round <span class="op">=</span> <span class="fl">15</span>, source <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 18 × 12</span></span></span>
+<span><span class="co">#&gt;    teamid mean_rank updated  percentage source sourceid swarms  rank  wins round</span></span>
+<span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>      1      6.11 2019-07…      111.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     6  12.7    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>      2      6.01 2019-07…      107.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     5  13      15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>      3     16.7  2019-07…       82.8 Squig…        1 <span style="color: #949494;">"</span>c(\"…    17   6.1    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>      4      4.20 2019-07…      114   Squig…        1 <span style="color: #949494;">"</span>c(\"…     4  14.1    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>      5      9.98 2019-07…       99.8 Squig…        1 <span style="color: #949494;">"</span>c(\"…    10  10.8    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>      6      9.71 2019-07…      104.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     9  10.8    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>      7      1.21 2019-07…      138.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     1  17.3    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>      8     17.7  2019-07…       70.2 Squig…        1 <span style="color: #949494;">"</span>c(\"…    18   4.9    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>      9      3.26 2019-07…      129.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     2  14.4    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>     10     13.0  2019-07…       97.6 Squig…        1 <span style="color: #949494;">"</span>c(\"…    14   8.8    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>     11     14.8  2019-07…       85.3 Squig…        1 <span style="color: #949494;">"</span>c(\"…    16   8      15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span>     12     10.9  2019-07…       98.9 Squig…        1 <span style="color: #949494;">"</span>c(\"…    11  10.2    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span>     13      8.24 2019-07…      107.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     8  11.5    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span>     14      6.67 2019-07…      101.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     7  12.8    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span>     15     13.8  2019-07…       83.2 Squig…        1 <span style="color: #949494;">"</span>c(\"…    15   9      15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span>     16     12.9  2019-07…       93.4 Squig…        1 <span style="color: #949494;">"</span>c(\"…    13   9.2    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span>     17      4.16 2019-07…      107.  Squig…        1 <span style="color: #949494;">"</span>c(\"…     3  14.4    15</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span>     18     11.9  2019-07…       94.1 Squig…        1 <span style="color: #949494;">"</span>c(\"…    12   9.8    15</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: team &lt;chr&gt;, year &lt;int&gt;</span></span></span></code></pre>
 </div>
-<div id="pav" class="section level2">
-<h2 class="hasAnchor">
-<a href="#pav" class="anchor"></a>PAV</h2>
-<p>Fetch info about players using HPN Footy’s Player Approximate Value.</p>
+<div class="section level3">
+<h3 id="pav">PAV<a class="anchor" aria-label="anchor" href="#pav"></a>
+</h3>
+<p>Fetch info about players using HPN Footy’s Player Approximate
+Value.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"pav"</span>, 
-                    firstname <span class="op">=</span> <span class="st">"Dustin"</span>, 
-                    surname <span class="op">=</span> <span class="st">"Martin"</span>, 
-                    year <span class="op">=</span> <span class="fl">2017</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; # A tibble: 1 × 21
-#&gt;   mPAV_total  year PAV_def_rank pavid PAV_off_rank PAV_mid_rank PAV_total_rank
-#&gt;        &lt;dbl&gt; &lt;int&gt;        &lt;int&gt; &lt;int&gt;        &lt;int&gt;        &lt;int&gt;          &lt;int&gt;
-#&gt; 1       0.96  2017          253  8632           16            1              2
-#&gt; # … with 14 more variables: team &lt;int&gt;, mPAV_off &lt;dbl&gt;, games &lt;int&gt;,
-#&gt; #   PAV_off &lt;dbl&gt;, PAV_def &lt;dbl&gt;, firstname &lt;chr&gt;, name &lt;chr&gt;, mPAV_mid &lt;dbl&gt;,
-#&gt; #   mPAV_rank &lt;int&gt;, mPAV_def &lt;dbl&gt;, X._of_team_games &lt;dbl&gt;, PAV_total &lt;dbl&gt;,
-#&gt; #   PAV_mid &lt;dbl&gt;, surname &lt;chr&gt;</code></pre>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/fetch_squiggle_data.html">fetch_squiggle_data</a></span><span class="op">(</span><span class="st">"pav"</span>,</span>
+<span>  firstname <span class="op">=</span> <span class="st">"Dustin"</span>,</span>
+<span>  surname <span class="op">=</span> <span class="st">"Martin"</span>,</span>
+<span>  year <span class="op">=</span> <span class="fl">2017</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 21</span></span></span>
+<span><span class="co">#&gt;   PAV_mid_rank mPAV_def games firstname mPAV_mid  year PAV_total PAV_def_rank</span></span>
+<span><span class="co">#&gt;          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>            1    -<span style="color: #BB0000;">0.41</span>    25 Dustin        2.06  <span style="text-decoration: underline;">2</span>017      26.8          253</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 13 more variables: name &lt;chr&gt;, PAV_off_rank &lt;int&gt;, X._of_team_games &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   PAV_total_rank &lt;int&gt;, PAV_mid &lt;dbl&gt;, surname &lt;chr&gt;, PAV_def &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   team &lt;int&gt;, mPAV_total &lt;dbl&gt;, pavid &lt;int&gt;, mPAV_off &lt;dbl&gt;, PAV_off &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   mPAV_rank &lt;int&gt;</span></span></span></code></pre>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
+      </div>
 
 </div>
 
 
 
       <footer><div class="copyright">
-  <p>Developed by James Day, Robert Nguyen, Oscar Lane.</p>
+  <p></p>
+<p>Developed by James Day, Robert Nguyen, Oscar Lane.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
       </footer>
 </div>
 
-  
+
+
+
 
 
   </body>
